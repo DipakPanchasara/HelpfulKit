@@ -45,7 +45,7 @@ To integrate SnapKit into your Xcode project using Swift Package Manager, add it
 
 ```bash
   dependencies: [
-    .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1"))
+    .package(url: "https://github.com/DipakPanchasara/HelpfulKit.git", .upToNextMajor(from: "0.0.1"))
 ]
 ```
 ## License
