@@ -12,6 +12,12 @@
 		217C8B512954769A00D70261 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B4E2954769A00D70261 /* ExtensionString.swift */; };
 		217C8B522954769A00D70261 /* ExtensionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B4F2954769A00D70261 /* ExtensionArray.swift */; };
 		217C8B54295476C100D70261 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B53295476C100D70261 /* Logger.swift */; };
+		21AD7176295AB88700218F51 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AD7174295AB88700218F51 /* EmptyView.xib */; };
+		21AD7177295AB88700218F51 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD7175295AB88700218F51 /* EmptyView.swift */; };
+		21AD7179295AB8BE00218F51 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD7178295AB8BE00218F51 /* ExtensionUIView.swift */; };
+		21AD717B295AB90A00218F51 /* ExtensionNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD717A295AB90A00218F51 /* ExtensionNSObject.swift */; };
+		21AD717D295ABA3000218F51 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD717C295ABA3000218F51 /* ExtensionUIColor.swift */; };
+		21AD717F295ABE8300218F51 /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD717E295ABE8300218F51 /* ExtensionUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		217C8B4E2954769A00D70261 /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		217C8B4F2954769A00D70261 /* ExtensionArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionArray.swift; sourceTree = "<group>"; };
 		217C8B53295476C100D70261 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		21AD7174295AB88700218F51 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		21AD7175295AB88700218F51 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		21AD7178295AB8BE00218F51 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		21AD717A295AB90A00218F51 /* ExtensionNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject.swift; sourceTree = "<group>"; };
+		21AD717C295ABA3000218F51 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		21AD717E295ABE8300218F51 /* ExtensionUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +65,27 @@
 		217C8B452954766900D70261 /* HelpfulKit */ = {
 			isa = PBXGroup;
 			children = (
+				21AD7173295AB88700218F51 /* EmptyView */,
 				217C8B462954766900D70261 /* HelpfulKit.h */,
 				217C8B4F2954769A00D70261 /* ExtensionArray.swift */,
 				217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */,
 				217C8B4E2954769A00D70261 /* ExtensionString.swift */,
 				217C8B53295476C100D70261 /* Logger.swift */,
+				21AD7178295AB8BE00218F51 /* ExtensionUIView.swift */,
+				21AD717A295AB90A00218F51 /* ExtensionNSObject.swift */,
+				21AD717C295ABA3000218F51 /* ExtensionUIColor.swift */,
+				21AD717E295ABE8300218F51 /* ExtensionUITextField.swift */,
 			);
 			path = HelpfulKit;
+			sourceTree = "<group>";
+		};
+		21AD7173295AB88700218F51 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				21AD7174295AB88700218F51 /* EmptyView.xib */,
+				21AD7175295AB88700218F51 /* EmptyView.swift */,
+			);
+			path = EmptyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AD7176295AB88700218F51 /* EmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,10 +169,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AD7179295AB8BE00218F51 /* ExtensionUIView.swift in Sources */,
 				217C8B512954769A00D70261 /* ExtensionString.swift in Sources */,
+				21AD7177295AB88700218F51 /* EmptyView.swift in Sources */,
+				21AD717F295ABE8300218F51 /* ExtensionUITextField.swift in Sources */,
+				21AD717D295ABA3000218F51 /* ExtensionUIColor.swift in Sources */,
 				217C8B502954769A00D70261 /* ExtensionDictionary.swift in Sources */,
 				217C8B522954769A00D70261 /* ExtensionArray.swift in Sources */,
 				217C8B54295476C100D70261 /* Logger.swift in Sources */,
+				21AD717B295AB90A00218F51 /* ExtensionNSObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +328,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -333,7 +367,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
