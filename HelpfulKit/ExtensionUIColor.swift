@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-extension UIColor {
+public extension UIColor {
     
     /// Initializer for creating color
     ///
@@ -92,7 +92,7 @@ extension UIColor {
     }
 }
 
-extension UIColor{
+public extension UIColor {
     /// Inverse color from UIColor
     ///
     /// - returns: UIColor
@@ -116,7 +116,7 @@ extension UIColor{
 }
 
 
-extension UIColor {
+public extension UIColor {
     
     convenience init(hexString: String, alpha: CGFloat = 1.0) {
         

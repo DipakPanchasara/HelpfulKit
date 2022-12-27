@@ -112,3 +112,32 @@ extension ArraySlice {
     /// Returns the array slice count.
     public func getCount() -> UInt { return UInt(count) }
 }
+
+extension Array where Element: Hashable {
+
+    /// Big O(N) version.
+    var uniques: Array {
+        // Go front to back, add element to buffer if it isn't a repeat.
+         var buffer: [Element] = []
+         var dictionary: [Element: Int] = [:]
+         for element in self where dictionary[element] == nil {
+             buffer.append(element)
+             dictionary[element] = 1
+         }
+         return buffer
+    }
+}
+
+extension Array {
+    var secondToLast: Element? {
+        let target: Index = array.count - 2
+        return indices.contains(target) ? self[target] : nil
+    }
+}
+
+extension Array where Element: Hashable {
+
+    var set: Set<Element> {
+        Set(self)
+    }
+}

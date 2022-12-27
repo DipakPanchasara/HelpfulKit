@@ -45,12 +45,12 @@ extension KeyPath: ExpressibleByStringLiteral {
     }
 }
 
-public protocol StringProtocol {
+public protocol DictionaryStringProtocol {
     // swiftlint:disable identifier_name
     init(string s: String)
 }
 
-extension String: StringProtocol {
+extension String: DictionaryStringProtocol {
     // swiftlint:disable identifier_name
     public init(string s: String) {
         self = s
@@ -92,7 +92,7 @@ extension Dictionary {
     }
 }
 
-extension Dictionary where Key: StringProtocol {
+extension Dictionary where Key: DictionaryStringProtocol {
     public subscript(keyPath keyPath: KeyPath) -> Any? {
         
         switch keyPath.headAndTail() {
@@ -132,5 +132,21 @@ extension Dictionary {
         var result = lhs
         rhs.forEach { result[$0] = $1 }
         return result
+    }
+}
+
+extension Dictionary {
+
+    var getKeyValueString: String {
+        var arr = Array<String>()
+        for (key, value) in self {
+            arr.append("\(key)=\(value)")
+        }
+        return arr.joined(separator: "&")
+    }
+    
+    var data: Data? {
+        return try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+
     }
 }

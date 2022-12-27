@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension NSObject {
+public extension NSObject {
 
     @objc class var className: String {
         String(describing: self)

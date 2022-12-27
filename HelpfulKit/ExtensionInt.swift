@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+public extension Int {
+    var double: Double {
+        Double(self)
+    }
+    var float: Float {
+        Float(self)
+    }
+}

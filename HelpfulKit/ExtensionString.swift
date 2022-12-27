@@ -64,3 +64,37 @@ extension String {
     }
 
 }
+
+extension String {
+    
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+
+        return ceil(boundingBox.height)
+    }
+
+    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+
+        return ceil(boundingBox.width)
+    }
+}
+
+extension StringProtocol {
+
+    /// Checks if it has the string and lowercases both so capitalization is independent
+    /// - Parameter other: string contained
+    /// - Returns: true if it contains the string regardless of capitalization.
+    func contains<T: StringProtocol>(other: T) -> Bool {
+        lowercased().contains(other.lowercased())
+    }
+
+    /// Useful for search.
+    /// - Parameter other: string contained
+    /// - Returns: false if the string is not contained and not "" nor nil.
+    func containsOrEmpty<T: StringProtocol>(other: T?) -> Bool {
+        other.map { $0 == "" ? true : contains(other: $0) } ?? true
+    }
+}
