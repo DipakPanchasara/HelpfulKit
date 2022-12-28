@@ -8,44 +8,37 @@
 import UIKit
 
 class EmptyView: UIView {
-    
-    @IBOutlet  var emptyStateImageView  : UIImageView!
-    @IBOutlet  var emptyTitleLabel      : UILabel!
-    @IBOutlet  var emptySubtitleLabel   : UILabel!
-    
+    @IBOutlet  var emptyStateImageView: UIImageView!
+    @IBOutlet  var emptyTitleLabel: UILabel!
+    @IBOutlet  var emptySubtitleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupTheme()
     }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupTheme()
     }
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.setupTheme()
     }
-    
     func setupTheme() {
-        
     }
-    
 }
 
 extension UIView {
-    
     func getEmptyStateDetailsView() -> EmptyView? {
-        //Bundle.main.loadNibNamed(EmptyView.className, owner: nil, options: nil)?[0] as? EmptyView
-        
+//  Bundle.main.loadNibNamed(EmptyView.className, owner: nil, options: nil)?[0] as? EmptyView
 //        guard let emptyView = EmptyView.fromNib(named: EmptyView.className)  else {
 //            return nil
 //        }
         return EmptyView.fromNib(named: EmptyView.className)
     }
-    // MARK: Get Empty State
-    func getEmptyStateDetails(image: UIImage? = nil,strTitle: String,strSubTitle: String = "") -> EmptyView? {
+// MARK: - Get Empty State
+    func getEmptyStateDetails(image: UIImage? = nil,
+                              strTitle: String,
+                              strSubTitle: String = "") -> EmptyView? {
         guard let emptyView = self.getEmptyStateDetailsView() else {
         return nil
       }
@@ -55,9 +48,11 @@ extension UIView {
       return emptyView
     }
 }
-//MARK:- UITableView
+// MARK: - UITableView
 extension UITableView {
-    func setEmptyView(image: UIImage? = nil,strTitle: String, strSubTitle: String = "") {
+    func setEmptyView(image: UIImage? = nil,
+                      strTitle: String,
+                      strSubTitle: String = "") {
         guard let emptyView = getEmptyStateDetailsView() else {
             return
         }
@@ -67,7 +62,7 @@ extension UITableView {
         emptyView.frame = self.frame
         self.backgroundView = emptyView
     }
-    func removeEmptyView(){
+    func removeEmptyView() {
         self.backgroundView = nil
     }
 }

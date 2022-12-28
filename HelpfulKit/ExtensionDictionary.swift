@@ -94,7 +94,6 @@ extension Dictionary {
 
 extension Dictionary where Key: DictionaryStringProtocol {
     public subscript(keyPath keyPath: KeyPath) -> Any? {
-        
         switch keyPath.headAndTail() {
         case nil:
             // key path is empty.
@@ -117,9 +116,7 @@ extension Dictionary where Key: DictionaryStringProtocol {
                 return nil
             }
         }
-        
     }
-    
 }
 
 public func | <K, V> (first: [K: V], second: [K: V]) -> [K: V] {
@@ -138,13 +135,12 @@ extension Dictionary {
 extension Dictionary {
 
     var getKeyValueString: String {
-        var arr = Array<String>()
+        var arr = [String]()
         for (key, value) in self {
             arr.append("\(key)=\(value)")
         }
         return arr.joined(separator: "&")
     }
-    
     var data: Data? {
         return try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
 

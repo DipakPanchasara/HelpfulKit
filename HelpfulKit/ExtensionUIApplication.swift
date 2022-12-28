@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 public extension UIApplication {
-    
     class func topViewController(controller: UIViewController? = nil) -> UIViewController? {
         var cont = controller
         if controller == nil {
@@ -38,10 +37,8 @@ public extension UIApplication {
     }
 }
 
-
 @available(iOS 13.0, *)
 public extension UIApplication {
-    
     class var keyWindowScene: UIWindow? {
         // Get connected scenes
         return UIApplication.shared.connectedScenes
@@ -55,4 +52,3 @@ public extension UIApplication {
             .first(where: \.isKeyWindow)
     }
 }
-

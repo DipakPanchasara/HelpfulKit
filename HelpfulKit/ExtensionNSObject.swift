@@ -23,7 +23,7 @@ public extension NSObject {
     }
 
     @objc func isUnitTestRunning() -> Bool {
-        if let _ = NSClassFromString("XCTest") {
+        if NSClassFromString("XCTest") != nil {
             print("\(#function) METHOD CALLED FROM UNIT TEST")
             return true
         }

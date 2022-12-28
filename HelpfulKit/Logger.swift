@@ -19,7 +19,6 @@ public protocol PerformanceTracker {
 
     /// Name of the particular tracker
     init(name: String)
-    
     /// Stop's tracking
     func stop()
 }
@@ -27,7 +26,6 @@ public protocol PerformanceTracker {
 /// This protocol is used for specific implementation
 /// of a solution to track performance.
 public protocol PerformanceTrackingSolution {
-    
     /// Generates a tracking event.
     func start(name: String) -> PerformanceTracker
 }
@@ -51,24 +49,17 @@ public protocol PerformanceTrackingSolution {
  ````
  */
 public class CorePerformance {
-    
     private var tracker: PerformanceTrackingSolution?
-    
     public class var sharedInstance: CorePerformance {
-        
         struct CorePerformanceInstance {
-            
             static let instance = CorePerformance()
         }
-        
         return CorePerformanceInstance.instance
     }
-    
     /// Way to register a particular performance tracker
     public func registerTracker(tracker: PerformanceTrackingSolution) {
         self.tracker = tracker
     }
-    
     /// Entry point to generate a new performance trakcer
     public func start(name: String) -> PerformanceTracker? {
         return tracker?.start(name: name)
@@ -78,11 +69,8 @@ public class CorePerformance {
 /// Protocol that is use as a way to create a custom
 /// logger for the application.
 public protocol CustomLogger {
-    
     var currentLevel: LoggerLevel { get set }
-    
     func log(level: LoggerLevel, text: String)
-    
 }
 
 extension OSLog {
@@ -95,7 +83,6 @@ extension OSLog {
 public final class Logger: NSObject {
 
     private static var customLoggers = [CustomLogger]()
-    
     public init(level: LoggerLevel = .error,
                 customLoggers: [CustomLogger] = [CustomLogger]()) {
         super.init()
@@ -203,7 +190,6 @@ public final class Logger: NSObject {
 
     private static func notifyCustomLoggers(level: LoggerLevel, text: String) {
         guard !Logger.customLoggers.isEmpty else { return }
-        
         for logger in Logger.customLoggers {
             logger.log(level: level, text: text)
         }

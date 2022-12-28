@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 public extension UIWindow {
-
+    // swiftlint:disable nesting
     /// Transition Options
     class TransitionOptions: NSObject, CAAnimationDelegate {
-
         /// Curve of animation
         ///
         /// - linear: linear
@@ -24,20 +23,18 @@ public extension UIWindow {
             case easeIn
             case easeOut
             case easeInOut
-
             /// Return the media timing function associated with curve
             internal var function: CAMediaTimingFunction {
                 let key: String!
                 switch self {
-                case .linear:       key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.linear)
-                case .easeIn:       key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeIn)
-                case .easeOut:      key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeOut)
-                case .easeInOut:    key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeInEaseOut)
+                case .linear: key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.linear)
+                case .easeIn: key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeIn)
+                case .easeOut: key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeOut)
+                case .easeInOut: key = convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeInEaseOut)
                 }
                 return CAMediaTimingFunction(name: convertToCAMediaTimingFunctionName(key))
             }
         }
-
         /// Direction of the animation
         ///
         /// - fade: fade to new controller
@@ -51,7 +48,6 @@ public extension UIWindow {
             case toBottom
             case toLeft
             case toRight
-
             /// Return the associated transition
             ///
             /// - Returns: transition
@@ -74,7 +70,6 @@ public extension UIWindow {
                 return transition
             }
         }
-
         /// Background of the transition
         /// - snapshot: snapshot of current root view controller
         /// - solidColor: solid color
@@ -84,23 +79,16 @@ public extension UIWindow {
             case solidColor(_: UIColor)
             case customView(_: UIView)
         }
-
         /// Duration of the animation (default is 0.20s)
         public var duration: TimeInterval = 0.20
-
         /// Direction of the transition (default is `toRight`)
         public var direction: TransitionOptions.Direction = .toRight
-
         /// Style of the transition (default is `linear`)
         public var style: TransitionOptions.Curve = .linear
-
         /// Background of the transition (default is `nil`)
-        public var background: TransitionOptions.Background? = nil
-
-        public var completionBlock: ((Bool) -> Void)? = nil
-
+        public var background: TransitionOptions.Background?
+        public var completionBlock: ((Bool) -> Void)?
         weak var previousViewController: UIViewController?
-
         /// Initialize a new options object with given direction and curve
         ///
         /// - Parameters:
@@ -110,36 +98,30 @@ public extension UIWindow {
             self.direction = direction
             self.style = style
         }
-
         /// Return the animation to perform for given options object
         internal var animation: CATransition {
             let transition = self.direction.transition()
             transition.duration = self.duration
             transition.timingFunction = self.style.function
             transition.delegate = self
-
             return transition
         }
-
         public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
             let oldNavigationController = previousViewController as? UINavigationController
-            oldNavigationController?.viewControllers = []//This is a tempoarary hack - not sure why nav controllers arent freed up.
+            oldNavigationController?.viewControllers = []
+            // This is a tempoarary hack - not sure why nav controllers arent freed up.
             completionBlock?(flag)
         }
     }
-
-
     /// Fix for http://stackoverflow.com/a/27153956/849645
-    func set(rootViewController newRootViewController: UIViewController, options: TransitionOptions = TransitionOptions(), _ completion:((Bool) -> Void)? = nil) {
-
+    func set(rootViewController newRootViewController: UIViewController,
+             options: TransitionOptions = TransitionOptions(),
+             _ completion: ((Bool) -> Void)? = nil) {
         let previousViewController = rootViewController
-
         layer.add(options.animation, forKey: kCATransition)
         options.completionBlock = completion
         options.previousViewController = rootViewController
-
         rootViewController = newRootViewController
-
         // Update status bar appearance using the new view controllers appearance - animate if needed
         if UIView.areAnimationsEnabled {
             UIView.animate(withDuration: CATransaction.animationDuration()) {
@@ -148,11 +130,9 @@ public extension UIWindow {
         } else {
             newRootViewController.setNeedsStatusBarAppearanceUpdate()
         }
-
-        if #available(iOS 13.0, *) {
-            // In iOS 13 we don't want to remove the transition view as it'll create a blank screen
-        } else {
-            // The presenting view controllers view doesn't get removed from the window as its currently transistioning and presenting a view controller
+        if #unavailable(iOS 13.0) {
+            //            The presenting view controllers view doesn't get removed from
+            //            the window as its currently transistioning and presenting a view controller
             if let transitionViewClass = NSClassFromString("UITransitionView") {
                 for subview in subviews where subview.isKind(of: transitionViewClass) {
                     subview.removeFromSuperview()
@@ -168,14 +148,11 @@ public extension UIWindow {
         }
     }
 }
-
-
 // Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromCAMediaTimingFunctionName(_ input: CAMediaTimingFunctionName) -> String {
+private func convertFromCAMediaTimingFunctionName(_ input: CAMediaTimingFunctionName) -> String {
     return input.rawValue
 }
-
 // Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToCAMediaTimingFunctionName(_ input: String) -> CAMediaTimingFunctionName {
+private func convertToCAMediaTimingFunctionName(_ input: String) -> CAMediaTimingFunctionName {
     return CAMediaTimingFunctionName(rawValue: input)
 }

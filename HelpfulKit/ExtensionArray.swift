@@ -67,11 +67,9 @@ public extension Array {
     func divide(into size: Int) -> [[Element]] {
         return stride(from: 0, to: count, by: size).map {
             let end = Swift.min($0 + size, count)
-            
             if end <= count {
                 return Array(self[$0 ..< Swift.min($0 + size, count)])
             }
-            
             return [self[$0]]
         }
     }
@@ -85,7 +83,6 @@ extension Array {
         let objIndex = firstIndex {
             return $0 as AnyObject === element as AnyObject
         }
-        
         if let objIndex = objIndex {
             remove(at: objIndex)
         }
@@ -93,7 +90,7 @@ extension Array {
 }
 
 /// Swiping helper.
-extension Array where Element : Equatable {
+extension Array where Element: Equatable {
 
     /// This method swipes an element to the other element.
     /// element <- with

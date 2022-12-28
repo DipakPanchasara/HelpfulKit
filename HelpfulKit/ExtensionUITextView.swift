@@ -13,7 +13,7 @@ public extension UITextView {
     private class PlaceholderLabel: UILabel { }
 
     private var placeholderLabel: PlaceholderLabel {
-        if let label = subviews.compactMap( { $0 as? PlaceholderLabel }).first {
+        if let label = subviews.compactMap({ $0 as? PlaceholderLabel }).first {
             return label
         } else {
             let label = PlaceholderLabel(frame: .zero)
@@ -26,7 +26,7 @@ public extension UITextView {
     @IBInspectable
     var placeholder: String {
         get {
-            return subviews.compactMap( { $0 as? PlaceholderLabel }).first?.text ?? ""
+            return subviews.compactMap({ $0 as? PlaceholderLabel }).first?.text ?? ""
         }
         set {
             let placeholderLabel = self.placeholderLabel
@@ -43,10 +43,10 @@ public extension UITextView {
     }
     @IBInspectable var placeholderColor: UIColor {
         get {
-            return subviews.compactMap( { $0 as? PlaceholderLabel }).first?.textColor ?? .clear
+            return subviews.compactMap({ $0 as? PlaceholderLabel }).first?.textColor ?? .clear
         }
         set {
-            guard let placeholderLabel = subviews.compactMap( { $0 as? PlaceholderLabel }).first else { return }
+            guard let placeholderLabel = subviews.compactMap({ $0 as? PlaceholderLabel }).first else { return }
             placeholderLabel.textColor = newValue
         }
     }
@@ -55,7 +55,10 @@ public extension UITextView {
 
 extension UITextView: NSTextStorageDelegate {
 
-    public func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorage.EditActions, range editedRange: NSRange, changeInLength delta: Int) {
+    public func textStorage(_ textStorage: NSTextStorage,
+                            didProcessEditing editedMask: NSTextStorage.EditActions,
+                            range editedRange: NSRange,
+                            changeInLength delta: Int) {
         if editedMask.contains(.editedCharacters) {
             placeholderLabel.isHidden = !text.isEmpty
         }
