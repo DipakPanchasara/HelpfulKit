@@ -7,10 +7,10 @@
 
 import Foundation
 
+// swiftlint:disable syntactic_sugar
 public enum Nullable<T: Codable>: Codable {
     case null
     case value(T)
-    
     public init(_ optional: Optional<T>) {
         switch optional {
         case .some(let value):
@@ -19,7 +19,6 @@ public enum Nullable<T: Codable>: Codable {
             self = .null
         }
     }
-    
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
@@ -29,7 +28,6 @@ public enum Nullable<T: Codable>: Codable {
             try container.encode(value)
         }
     }
-    
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         do {
@@ -39,7 +37,6 @@ public enum Nullable<T: Codable>: Codable {
             self = .null
         }
     }
-    
     public var value: T? {
         guard case let .value(value) = self else { return nil }
         return value
