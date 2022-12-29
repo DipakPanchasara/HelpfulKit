@@ -35,6 +35,7 @@
 		21AD719F295AEB7300218F51 /* ExtensionUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD719E295AEB7300218F51 /* ExtensionUIWindow.swift */; };
 		21DE604D295D751900A0273D /* Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE604C295D751900A0273D /* Nullable.swift */; };
 		21DE604F295D755000A0273D /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE604E295D755000A0273D /* JSONValue.swift */; };
+		21E9A211295DCEA30071BC76 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9A210295DCEA30071BC76 /* CodableHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		21AD719E295AEB7300218F51 /* ExtensionUIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIWindow.swift; sourceTree = "<group>"; };
 		21DE604C295D751900A0273D /* Nullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nullable.swift; sourceTree = "<group>"; };
 		21DE604E295D755000A0273D /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
+		21E9A210295DCEA30071BC76 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				21AD719E295AEB7300218F51 /* ExtensionUIWindow.swift */,
 				21DE604C295D751900A0273D /* Nullable.swift */,
 				21DE604E295D755000A0273D /* JSONValue.swift */,
+				21E9A210295DCEA30071BC76 /* CodableHelper.swift */,
 			);
 			path = HelpfulKit;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				21AD717D295ABA3000218F51 /* ExtensionUIColor.swift in Sources */,
 				21AD719F295AEB7300218F51 /* ExtensionUIWindow.swift in Sources */,
 				21AD7195295AE76600218F51 /* ExtensionUIImage.swift in Sources */,
+				21E9A211295DCEA30071BC76 /* CodableHelper.swift in Sources */,
 				21DE604D295D751900A0273D /* Nullable.swift in Sources */,
 				21AD7187295AE3E600218F51 /* ExtensionUITableView.swift in Sources */,
 				21AD7197295AE88800218F51 /* ExtensionInt.swift in Sources */,

@@ -41,26 +41,26 @@ public func getBackgroundQueue(qos: DispatchQoS.QoSClass = DispatchQoS.QoSClass.
 /// Remove null object from Dictonary
 /// - Parameter source: Dictonary contained null value
 /// - Returns: Dictonary contained not null value
-public func rejectNil(_ source: [String:Any?]) -> [String:Any]? {
+public func rejectNil(_ source: [String: Any?]) -> [String: Any]? {
     let destination = source.reduce(into: [String: Any]()) { (result, item) in
         if let value = item.value {
             result[item.key] = value
         }
     }
-    
     if destination.isEmpty {
         return nil
     }
     return destination
 }
 
+// swiftlint:disable syntactic_sugar
 /// Remove null object from API Header
 /// - Parameter source: Dictonary contained null value
 /// - Returns: Dictonary contained not null Headers
-public func rejectNilHeaders(_ source: [String:Any?]) -> [String:String] {
+public func rejectNilHeaders(_ source: [String: Any?]) -> [String: String] {
     return source.reduce(into: [String: String]()) { (result, item) in
         if let collection = item.value as? Array<Any?> {
-            result[item.key] = collection.filter({ $0 != nil }).map{ "\($0!)" }.joined(separator: ",")
+            result[item.key] = collection.filter({ $0 != nil }).map { "\($0!)" }.joined(separator: ",")
         } else if let value: Any = item.value {
             result[item.key] = "\(value)"
         }
@@ -71,15 +71,14 @@ public func rejectNilHeaders(_ source: [String:Any?]) -> [String:String] {
 /// - Parameter source: Dictonary contained Bool value
 /// - Returns: Dictonary contained Bool value To String
 ///
-public func convertBoolToString(_ source: [String: Any]?) -> [String:Any]? {
+public func convertBoolToString(_ source: [String: Any]?) -> [String: Any]? {
     guard let source = source else {
         return nil
     }
-    
     return source.reduce(into: [String: Any](), { (result, item) in
         switch item.value {
-        case let x as Bool:
-            result[item.key] = x.description
+        case let xBool as Bool:
+            result[item.key] = xBool.description
         default:
             result[item.key] = item.value
         }
@@ -88,9 +87,9 @@ public func convertBoolToString(_ source: [String: Any]?) -> [String:Any]? {
 
 /// Convert Dictonary Values To Query Items
 /// - Parameter source: Dictonary
-/// - Returns: Array of URLQueryItems 
+/// - Returns: Array of URLQueryItems
 ///
-public func mapValuesToQueryItems(_ source: [String:Any?]) -> [URLQueryItem]? {
+public func mapValuesToQueryItems(_ source: [String: Any?]) -> [URLQueryItem]? {
     let destination = source.filter({ $0.value != nil}).reduce(into: [URLQueryItem]()) { (result, item) in
         if let collection = item.value as? Array<Any?> {
             let value = collection.filter({ $0 != nil }).map({"\($0!)"}).joined(separator: ",")
