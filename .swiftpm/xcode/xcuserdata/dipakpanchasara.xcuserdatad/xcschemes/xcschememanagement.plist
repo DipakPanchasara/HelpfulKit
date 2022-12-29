@@ -10,5 +10,18 @@
 			<integer>0</integer>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>HelpfulKit</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>HelpfulKit_HelpfulKit</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
