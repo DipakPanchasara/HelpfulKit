@@ -25,7 +25,7 @@ platform :ios, '11.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'HelpfulKit', '~> 0.0.1'
+    pod 'HelpfulKit'
 end
 ```
 
@@ -45,7 +45,7 @@ To integrate SnapKit into your Xcode project using Swift Package Manager, add it
 
 ```bash
   dependencies: [
-    .package(url: "https://github.com/DipakPanchasara/HelpfulKit.git", .upToNextMajor(from: "0.0.1"))
+    .package(url: "https://github.com/DipakPanchasara/HelpfulKit.git")
 ]
 ```
 ## License
