@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = "HelpfulKit"
-  s.version  = "0.0.1"
+  s.version  = "0.1.1"
   s.platform = :ios, "11.0"
   s.summary  = "HelpfulKit pod creation for iOS"
   s.description = "Helpful Extension, Structures and Classes"
@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "10.0"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.source_files = "HelpfulKit/*"
-  s.swift_versions = "4.0"
+  s.swift_versions = "5.0"
 end
