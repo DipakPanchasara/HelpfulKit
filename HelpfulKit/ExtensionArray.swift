@@ -75,11 +75,11 @@ public extension Array {
     }
 }
 
-extension Array {
+public extension Array {
     /// Remove the given element from this array, by comparing pointer references.
     ///
     /// - parameter element: The element to remove.
-    public mutating func removeElementByReference(_ element: Element) {
+    mutating func removeElementByReference(_ element: Element) {
         let objIndex = firstIndex {
             return $0 as AnyObject === element as AnyObject
         }
@@ -90,11 +90,11 @@ extension Array {
 }
 
 /// Swiping helper.
-extension Array where Element: Equatable {
+public extension Array where Element: Equatable {
 
     /// This method swipes an element to the other element.
     /// element <- with
-    public mutating func swipe(_ element: Iterator.Element?, with: Iterator.Element?) -> Bool {
+    mutating func swipe(_ element: Iterator.Element?, with: Iterator.Element?) -> Bool {
 
         guard let element = element as Iterator.Element? else { return false }
         guard let with = with as Iterator.Element? else { return false }
@@ -104,13 +104,13 @@ extension Array where Element: Equatable {
     }
 }
 
-extension ArraySlice {
+public extension ArraySlice {
 
     /// Returns the array slice count.
-    public func getCount() -> UInt { return UInt(count) }
+    func getCount() -> UInt { return UInt(count) }
 }
 
-extension Array where Element: Hashable {
+public extension Array where Element: Hashable {
 
     /// Big O(N) version.
     var uniques: Array {
@@ -125,14 +125,14 @@ extension Array where Element: Hashable {
     }
 }
 
-extension Array {
+public extension Array {
     var secondToLast: Element? {
         let target: Index = array.count - 2
         return indices.contains(target) ? self[target] : nil
     }
 }
 
-extension Array where Element: Hashable {
+public extension Array where Element: Hashable {
 
     var set: Set<Element> {
         Set(self)

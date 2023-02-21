@@ -25,7 +25,7 @@ public extension URL {
     }
 }
 
-extension Array where Iterator.Element == URLQueryItem {
+public extension Array where Iterator.Element == URLQueryItem {
     subscript(_ key: String) -> String? {
         return first(where: { $0.name == key })?.value
     }

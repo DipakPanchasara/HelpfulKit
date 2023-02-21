@@ -57,7 +57,7 @@ extension String: DictionaryStringProtocol {
     }
 }
 
-extension Dictionary {
+public extension Dictionary {
 
     /// Merges a dictionary.
     /// - Parameter dictionary: Dictionary to merge it's values
@@ -92,8 +92,8 @@ extension Dictionary {
     }
 }
 
-extension Dictionary where Key: DictionaryStringProtocol {
-    public subscript(keyPath keyPath: KeyPath) -> Any? {
+public extension Dictionary where Key: DictionaryStringProtocol {
+     subscript(keyPath keyPath: KeyPath) -> Any? {
         switch keyPath.headAndTail() {
         case nil:
             // key path is empty.
@@ -123,16 +123,16 @@ public func | <K, V> (first: [K: V], second: [K: V]) -> [K: V] {
     return first.union(second)
 }
 
-extension Dictionary {
+public extension Dictionary {
 
-    public static func + (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
+     static func + (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
         var result = lhs
         rhs.forEach { result[$0] = $1 }
         return result
     }
 }
 
-extension Dictionary {
+public extension Dictionary {
 
     var getKeyValueString: String {
         var arr = [String]()

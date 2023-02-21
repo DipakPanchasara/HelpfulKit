@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable extension UIView {
+@IBDesignable public extension UIView {
     @IBInspectable var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
         set {
@@ -61,11 +61,11 @@ import UIKit
     }
 }
 
-extension UIView {
+public extension UIView {
     /**
      Returns a view from a nib (with the same name)
      */
-    public class func fromNib(named: String? = nil) -> Self {
+     class func fromNib(named: String? = nil) -> Self {
         let name = named ?? "\(Self.self)"
         let bundle = Bundle(for: self)
         guard

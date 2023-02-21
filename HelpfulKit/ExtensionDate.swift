@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     // Convert local time to UTC (or GMT)
     func toGlobalTime() -> Date {
         return self.toTime(isGlobalOrLocal: true)
@@ -31,7 +31,7 @@ extension Date {
         let weekOfYear = Calendar.current.component(.weekOfYear, from: self)
         return weekOfYear
     }
-    public var dayofTheWeek: String {
+    var dayofTheWeek: String {
         let dayNumber = Calendar.current.component(.weekday, from: self)
         // day number starts from 1 but array count from 0
         return daysOfTheWeek[dayNumber - 1]
@@ -142,7 +142,7 @@ extension Date {
         return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
     }
 }
-extension TimeInterval {
+public extension TimeInterval {
     func asMinutes() -> Double { return self / (60.0) }
     func asHours() -> Double { return self / (60.0 * 60.0) }
     func asDays() -> Double { return self / (60.0 * 60.0 * 24.0) }
@@ -150,7 +150,7 @@ extension TimeInterval {
     func asMonths() -> Double { return self / (60.0 * 60.0 * 24.0 * 30.4369) }
     func asYears() -> Double { return self / (60.0 * 60.0 * 24.0 * 365.2422) }
 }
-extension String {
+public extension String {
     struct DateFormat {
         // Date formatter types
         static let DateFormatMMTxt = "MM"
@@ -169,7 +169,7 @@ extension String {
     }
 }
 
-extension Date {
+public extension Date {
     var yesterday: Date {
         return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
     }

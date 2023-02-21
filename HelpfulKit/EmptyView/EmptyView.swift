@@ -7,11 +7,11 @@
 
 import UIKit
 
-class EmptyView: UIView {
+public class EmptyView: UIView {
     @IBOutlet  var emptyStateImageView: UIImageView!
     @IBOutlet  var emptyTitleLabel: UILabel!
     @IBOutlet  var emptySubtitleLabel: UILabel!
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.setupTheme()
     }
@@ -27,7 +27,7 @@ class EmptyView: UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     func getEmptyStateDetailsView() -> EmptyView? {
 //  Bundle.main.loadNibNamed(EmptyView.className, owner: nil, options: nil)?[0] as? EmptyView
 //        guard let emptyView = EmptyView.fromNib(named: EmptyView.className)  else {
@@ -49,7 +49,7 @@ extension UIView {
     }
 }
 // MARK: - UITableView
-extension UITableView {
+public extension UITableView {
     func setEmptyView(image: UIImage? = nil,
                       strTitle: String,
                       strSubTitle: String = "") {

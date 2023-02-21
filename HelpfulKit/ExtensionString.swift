@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
 
     /// Constructs an NSDate based on the following
     /// format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
     /// - Returns: NSDate when the string contains the valid format,
     ///            otherwise nil
-    public func constructDate() -> Date? {
+    func constructDate() -> Date? {
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
@@ -28,7 +28,7 @@ extension String {
     /// 18002324545 -> +1 (800) 232-4545
     /// Otherwise (ex "", "aaaa", "3333") will return an empty String
     /// - Returns: Formatted Phone number, otherwise an empty String
-    public var prettyPrintPhoneNumber: String {
+    var prettyPrintPhoneNumber: String {
 
         let convertedPhoneNumber = NSMutableString(string: phoneNumber as NSString)
         let stringts: NSMutableString = convertedPhoneNumber
@@ -56,11 +56,11 @@ extension String {
     }
 
     /// Converts the string into all numbers in a way that can be use for making a phone call
-    public var phoneNumber: String {
+    var phoneNumber: String {
         return self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
     }
 
-    public var isSuccess: Bool {
+    var isSuccess: Bool {
         return self.caseInsensitiveCompare("success") == .orderedSame
     }
 
