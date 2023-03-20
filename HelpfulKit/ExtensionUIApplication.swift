@@ -33,7 +33,7 @@ public extension UIApplication {
             }
             return alert.presentingViewController
         }
-        return controller
+        return cont
     }
 }
 
