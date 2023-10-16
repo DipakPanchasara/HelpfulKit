@@ -36,6 +36,8 @@
 		21DE604D295D751900A0273D /* Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE604C295D751900A0273D /* Nullable.swift */; };
 		21DE604F295D755000A0273D /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE604E295D755000A0273D /* JSONValue.swift */; };
 		21E9A211295DCEA30071BC76 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9A210295DCEA30071BC76 /* CodableHelper.swift */; };
+		21FD4B7F2ADCF4AA0090BAAF /* ExtensionUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FD4B7E2ADCF4AA0090BAAF /* ExtensionUICollectionView.swift */; };
+		21FD4B812ADCF4D80090BAAF /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FD4B802ADCF4D80090BAAF /* CustomPrint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		21DE604C295D751900A0273D /* Nullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nullable.swift; sourceTree = "<group>"; };
 		21DE604E295D755000A0273D /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
 		21E9A210295DCEA30071BC76 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
+		21FD4B7E2ADCF4AA0090BAAF /* ExtensionUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionView.swift; sourceTree = "<group>"; };
+		21FD4B802ADCF4D80090BAAF /* CustomPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				21DE604C295D751900A0273D /* Nullable.swift */,
 				21DE604E295D755000A0273D /* JSONValue.swift */,
 				21E9A210295DCEA30071BC76 /* CodableHelper.swift */,
+				21FD4B7E2ADCF4AA0090BAAF /* ExtensionUICollectionView.swift */,
+				21FD4B802ADCF4D80090BAAF /* CustomPrint.swift */,
 			);
 			path = HelpfulKit;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 				21AD718F295AE5E500218F51 /* ExtensionCALayer.swift in Sources */,
 				21AD7189295AE42400218F51 /* ExtensionEncodable.swift in Sources */,
 				21AD7177295AB88700218F51 /* EmptyView.swift in Sources */,
+				21FD4B7F2ADCF4AA0090BAAF /* ExtensionUICollectionView.swift in Sources */,
 				21AD717F295ABE8300218F51 /* ExtensionUITextField.swift in Sources */,
 				21AD717D295ABA3000218F51 /* ExtensionUIColor.swift in Sources */,
+				21FD4B812ADCF4D80090BAAF /* CustomPrint.swift in Sources */,
 				21AD719F295AEB7300218F51 /* ExtensionUIWindow.swift in Sources */,
 				21AD7195295AE76600218F51 /* ExtensionUIImage.swift in Sources */,
 				21E9A211295DCEA30071BC76 /* CodableHelper.swift in Sources */,
