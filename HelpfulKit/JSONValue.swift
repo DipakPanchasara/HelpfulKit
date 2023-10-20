@@ -79,7 +79,7 @@ extension JSONValue: ExpressibleByArrayLiteral {
     }
 }
 
-extension JSONValue {
+public extension JSONValue {
     
     var string: String? {
         switch self {

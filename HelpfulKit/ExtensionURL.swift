@@ -30,3 +30,16 @@ public extension Array where Iterator.Element == URLQueryItem {
         return first(where: { $0.name == key })?.value
     }
 }
+
+public extension URL {
+    
+    func openApp() {
+        guard UIApplication.shared.canOpenURL(self) else { return }
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(self)
+        } else {
+            UIApplication.shared.openURL(self)
+        }
+    }
+}
+
