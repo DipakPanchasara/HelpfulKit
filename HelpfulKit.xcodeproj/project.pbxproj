@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		216E409C2B70C53D000D783A /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E409A2B70C53D000D783A /* EmptyView.xib */; };
+		216E409D2B70C53D000D783A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E409B2B70C53D000D783A /* EmptyView.swift */; };
 		217C8B472954766900D70261 /* HelpfulKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 217C8B462954766900D70261 /* HelpfulKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		217C8B502954769A00D70261 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */; };
 		217C8B512954769A00D70261 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B4E2954769A00D70261 /* ExtensionString.swift */; };
 		217C8B522954769A00D70261 /* ExtensionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B4F2954769A00D70261 /* ExtensionArray.swift */; };
 		217C8B54295476C100D70261 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B53295476C100D70261 /* Logger.swift */; };
-		21AD7176295AB88700218F51 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AD7174295AB88700218F51 /* EmptyView.xib */; };
-		21AD7177295AB88700218F51 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD7175295AB88700218F51 /* EmptyView.swift */; };
 		21AD7179295AB8BE00218F51 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD7178295AB8BE00218F51 /* ExtensionUIView.swift */; };
 		21AD717B295AB90A00218F51 /* ExtensionNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD717A295AB90A00218F51 /* ExtensionNSObject.swift */; };
 		21AD717D295ABA3000218F51 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD717C295ABA3000218F51 /* ExtensionUIColor.swift */; };
@@ -41,14 +41,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		216E409A2B70C53D000D783A /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		216E409B2B70C53D000D783A /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		217C8B432954766900D70261 /* HelpfulKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HelpfulKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		217C8B462954766900D70261 /* HelpfulKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpfulKit.h; sourceTree = "<group>"; };
 		217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		217C8B4E2954769A00D70261 /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		217C8B4F2954769A00D70261 /* ExtensionArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionArray.swift; sourceTree = "<group>"; };
 		217C8B53295476C100D70261 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		21AD7174295AB88700218F51 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
-		21AD7175295AB88700218F51 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		21AD7178295AB8BE00218F51 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		21AD717A295AB90A00218F51 /* ExtensionNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject.swift; sourceTree = "<group>"; };
 		21AD717C295ABA3000218F51 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
@@ -105,7 +105,8 @@
 		217C8B452954766900D70261 /* HelpfulKit */ = {
 			isa = PBXGroup;
 			children = (
-				21AD7173295AB88700218F51 /* EmptyView */,
+				216E409B2B70C53D000D783A /* EmptyView.swift */,
+				216E409A2B70C53D000D783A /* EmptyView.xib */,
 				217C8B462954766900D70261 /* HelpfulKit.h */,
 				217C8B4F2954769A00D70261 /* ExtensionArray.swift */,
 				217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */,
@@ -137,15 +138,6 @@
 				21FD4B802ADCF4D80090BAAF /* CustomPrint.swift */,
 			);
 			path = HelpfulKit;
-			sourceTree = "<group>";
-		};
-		21AD7173295AB88700218F51 /* EmptyView */ = {
-			isa = PBXGroup;
-			children = (
-				21AD7174295AB88700218F51 /* EmptyView.xib */,
-				21AD7175295AB88700218F51 /* EmptyView.swift */,
-			);
-			path = EmptyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21AD7176295AB88700218F51 /* EmptyView.xib in Resources */,
+				216E409C2B70C53D000D783A /* EmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,12 +248,12 @@
 				21AD719B295AE94E00218F51 /* ExtensionUIPageViewController.swift in Sources */,
 				21AD7191295AE65200218F51 /* ExtensionUIApplication.swift in Sources */,
 				21DE604F295D755000A0273D /* JSONValue.swift in Sources */,
+				216E409D2B70C53D000D783A /* EmptyView.swift in Sources */,
 				21AD7181295ADB5400218F51 /* ExtensionUITextView.swift in Sources */,
 				217C8B512954769A00D70261 /* ExtensionString.swift in Sources */,
 				21AD7183295ADC2E00218F51 /* Utility.swift in Sources */,
 				21AD718F295AE5E500218F51 /* ExtensionCALayer.swift in Sources */,
 				21AD7189295AE42400218F51 /* ExtensionEncodable.swift in Sources */,
-				21AD7177295AB88700218F51 /* EmptyView.swift in Sources */,
 				21FD4B7F2ADCF4AA0090BAAF /* ExtensionUICollectionView.swift in Sources */,
 				21AD717F295ABE8300218F51 /* ExtensionUITextField.swift in Sources */,
 				21AD717D295ABA3000218F51 /* ExtensionUIColor.swift in Sources */,
