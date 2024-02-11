@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		216E409C2B70C53D000D783A /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E409A2B70C53D000D783A /* EmptyView.xib */; };
-		216E409D2B70C53D000D783A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E409B2B70C53D000D783A /* EmptyView.swift */; };
 		217C8B472954766900D70261 /* HelpfulKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 217C8B462954766900D70261 /* HelpfulKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		217C8B502954769A00D70261 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */; };
 		217C8B512954769A00D70261 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C8B4E2954769A00D70261 /* ExtensionString.swift */; };
@@ -41,8 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		216E409A2B70C53D000D783A /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
-		216E409B2B70C53D000D783A /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		217C8B432954766900D70261 /* HelpfulKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HelpfulKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		217C8B462954766900D70261 /* HelpfulKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpfulKit.h; sourceTree = "<group>"; };
 		217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
@@ -105,8 +101,6 @@
 		217C8B452954766900D70261 /* HelpfulKit */ = {
 			isa = PBXGroup;
 			children = (
-				216E409B2B70C53D000D783A /* EmptyView.swift */,
-				216E409A2B70C53D000D783A /* EmptyView.xib */,
 				217C8B462954766900D70261 /* HelpfulKit.h */,
 				217C8B4F2954769A00D70261 /* ExtensionArray.swift */,
 				217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */,
@@ -211,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216E409C2B70C53D000D783A /* EmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +241,6 @@
 				21AD719B295AE94E00218F51 /* ExtensionUIPageViewController.swift in Sources */,
 				21AD7191295AE65200218F51 /* ExtensionUIApplication.swift in Sources */,
 				21DE604F295D755000A0273D /* JSONValue.swift in Sources */,
-				216E409D2B70C53D000D783A /* EmptyView.swift in Sources */,
 				21AD7181295ADB5400218F51 /* ExtensionUITextView.swift in Sources */,
 				217C8B512954769A00D70261 /* ExtensionString.swift in Sources */,
 				21AD7183295ADC2E00218F51 /* Utility.swift in Sources */,

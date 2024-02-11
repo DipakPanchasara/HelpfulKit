@@ -10,6 +10,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "12.0"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.source_files = "HelpfulKit/*"
-  s.resources = "HelpfulKit/*.{xib}"
   s.swift_versions = "5.0"
 end

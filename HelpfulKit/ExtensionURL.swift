@@ -32,7 +32,6 @@ public extension Array where Iterator.Element == URLQueryItem {
 }
 
 public extension URL {
-    
     func openApp() {
         guard UIApplication.shared.canOpenURL(self) else { return }
         if #available(iOS 10, *) {
@@ -42,4 +41,3 @@ public extension URL {
         }
     }
 }
-
