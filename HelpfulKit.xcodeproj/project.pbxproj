@@ -31,6 +31,8 @@
 		21AD719B295AE94E00218F51 /* ExtensionUIPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD719A295AE94E00218F51 /* ExtensionUIPageViewController.swift */; };
 		21AD719D295AEB2700218F51 /* ExtensionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD719C295AEB2700218F51 /* ExtensionSequence.swift */; };
 		21AD719F295AEB7300218F51 /* ExtensionUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AD719E295AEB7300218F51 /* ExtensionUIWindow.swift */; };
+		21BFF3D82BA968EA009A7131 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BFF3D52BA968EA009A7131 /* EmptyView.swift */; };
+		21BFF3D92BA968EA009A7131 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21BFF3D72BA968EA009A7131 /* EmptyView.xib */; };
 		21DE604D295D751900A0273D /* Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE604C295D751900A0273D /* Nullable.swift */; };
 		21DE604F295D755000A0273D /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE604E295D755000A0273D /* JSONValue.swift */; };
 		21E9A211295DCEA30071BC76 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E9A210295DCEA30071BC76 /* CodableHelper.swift */; };
@@ -64,6 +66,8 @@
 		21AD719A295AE94E00218F51 /* ExtensionUIPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIPageViewController.swift; sourceTree = "<group>"; };
 		21AD719C295AEB2700218F51 /* ExtensionSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSequence.swift; sourceTree = "<group>"; };
 		21AD719E295AEB7300218F51 /* ExtensionUIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIWindow.swift; sourceTree = "<group>"; };
+		21BFF3D52BA968EA009A7131 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		21BFF3D72BA968EA009A7131 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		21DE604C295D751900A0273D /* Nullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nullable.swift; sourceTree = "<group>"; };
 		21DE604E295D755000A0273D /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
 		21E9A210295DCEA30071BC76 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		217C8B452954766900D70261 /* HelpfulKit */ = {
 			isa = PBXGroup;
 			children = (
+				21BFF3D52BA968EA009A7131 /* EmptyView.swift */,
+				21BFF3D62BA968EA009A7131 /* Resources */,
 				217C8B462954766900D70261 /* HelpfulKit.h */,
 				217C8B4F2954769A00D70261 /* ExtensionArray.swift */,
 				217C8B4D2954769A00D70261 /* ExtensionDictionary.swift */,
@@ -132,6 +138,14 @@
 				21FD4B802ADCF4D80090BAAF /* CustomPrint.swift */,
 			);
 			path = HelpfulKit;
+			sourceTree = "<group>";
+		};
+		21BFF3D62BA968EA009A7131 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21BFF3D72BA968EA009A7131 /* EmptyView.xib */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BFF3D92BA968EA009A7131 /* EmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +256,7 @@
 				21AD719B295AE94E00218F51 /* ExtensionUIPageViewController.swift in Sources */,
 				21AD7191295AE65200218F51 /* ExtensionUIApplication.swift in Sources */,
 				21DE604F295D755000A0273D /* JSONValue.swift in Sources */,
+				21BFF3D82BA968EA009A7131 /* EmptyView.swift in Sources */,
 				21AD7181295ADB5400218F51 /* ExtensionUITextView.swift in Sources */,
 				217C8B512954769A00D70261 /* ExtensionString.swift in Sources */,
 				21AD7183295ADC2E00218F51 /* Utility.swift in Sources */,

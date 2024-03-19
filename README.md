@@ -1,9 +1,11 @@
 
 # HelpfulKit
 
+[![Version](https://img.shields.io/cocoapods/v/DPTabBar.svg?style=flat)](https://cocoapods.org/pods/HelpfulKit)
+[![License](https://img.shields.io/cocoapods/l/DPTabBar.svg?style=flat)](https://cocoapods.org/pods/HelpfulKit)
+[![Platform](https://img.shields.io/cocoapods/p/DPTabBar.svg?style=flat)](https://cocoapods.org/pods/HelpfulKit)
+
 Helpful Extension, Structures and Classes
-
-
 
 ## Installation
 
