@@ -26,10 +26,10 @@ extension Bundle {
 
         let bundleNames = [
             // For Swift Package Manager
-            "SwiftMessages_SwiftMessages",
+            "HelpfulKit_HelpfulKit",
 
             // For Carthage
-            "SwiftMessages",
+            "HelpfulKit",
         ]
 
         for bundleName in bundleNames {
