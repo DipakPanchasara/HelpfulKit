@@ -17,13 +17,13 @@ Helpful Extension, Structures and Classes
   $ gem install cocoapods
 ```
 
-CocoaPods 1.1.0+ is required to build `HelpfulKit 1.0.4`.
+CocoaPods 1.1.0+ is required to build `HelpfulKit 1.0.8`.
 
 To integrate HelpfulKit into your Xcode project using CocoaPods, specify it in your `Podfile`.:
 
 ```bash
 source 'https://github.com/DipakPanchasara/HelpfulKit.git'
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks!
 
 target '<Your Target Name>' do
