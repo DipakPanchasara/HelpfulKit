@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'HelpfulKit'
-  s.version  = '1.0.8'
+  s.version  = '1.0.9'
   s.platform = :ios, '12.0'
   s.summary  = 'HelpfulKit pod creation for iOS'
   s.description = 'Helpful Extension, Structures and Classes'
