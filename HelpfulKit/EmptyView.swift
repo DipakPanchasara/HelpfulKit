@@ -30,7 +30,7 @@ public class EmptyView: UIView {
 
 public extension UIView {
     func getEmptyStateDetailsView() -> EmptyView? {
-        if let view: EmptyView = try? EmptyView.viewFromNib() as? EmptyView {
+        if let view: EmptyView = try? EmptyView.viewFromNib(named: EmptyView.className) {
             return view
         } else {
             return nil
