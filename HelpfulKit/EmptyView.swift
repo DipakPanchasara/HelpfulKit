@@ -30,7 +30,11 @@ public class EmptyView: UIView {
 
 public extension UIView {
     func getEmptyStateDetailsView() -> EmptyView? {
-        return try? EmptyView.viewFromNib()
+        if let view: EmptyView = try? EmptyView.viewFromNib() as? EmptyView {
+            return view
+        } else {
+            return nil
+        }
     }
     // MARK: - Get Empty State
     func getEmptyStateDetails(image: UIImage? = nil,
