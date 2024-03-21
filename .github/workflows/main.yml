@@ -1,1 +1,10 @@
-
+name: Workflow for Codecov
+on: [push, pull_request]
+jobs:
+    run:
+    steps:
+        - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+        token: ${{ secrets.b04bf5fd-1bc9-48e3-ac63-588ebe6f328b }}
+        slug: DipakPanchasara/HelpfulKit
