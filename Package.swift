@@ -24,7 +24,6 @@
 //
 
 import PackageDescription
-
 let package = Package(
     name: "HelpfulKit",
     platforms: [
